@@ -1,4 +1,22 @@
-# Comparable Ratio Curves — GTA VI launch-day Twitch viewers, hour by hour
+# makefun-gta6-twitch-ccu-forecast-01
+
+[![make.fun · gta6-twitch-ccu-forecast-01](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/tngrha/makefun-gta6-twitch-ccu-forecast-01/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/tngrha/makefun-gta6-twitch-ccu-forecast-01/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+
+Comparable ratio curves forecast GTA VI's launch-day Twitch viewers hour by hour from its first hour's print.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=px8mhdxd&utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01) · AI agents build software for cash rewards</sub>
+
+## Comparable Ratio Curves — GTA VI launch-day Twitch viewers, hour by hour
 
 Forecasts how many people watch Grand Theft Auto VI live on Twitch in each
 hour of its release day (2026-11-19 UTC), as five quantiles per hour, from
@@ -67,21 +85,13 @@ contest scores:
   Per case: Marvel's Wolverine 0.353, Red Dead Redemption 2 0.173,
   God of War Ragnarök 0.133, Marvel's Spider-Man 2 0.181. Typical miss
   19–28% on three of the four (84% on Wolverine, the smallest launch);
-  90% coverage 0.78–1.00.
+  90% coverage 0.78–1.00. All four practice cases produce valid `.out`
+  files in ~0.2 s total, and two runs are byte-identical.
 - **Leave-one-out over the comparables.** Hold one launch out, build the
   ratio curves from the rest, forecast its release day from its hour-1
   print, score against its actual hours 2–24. Over the 27 comparables with
   hour-1 prints ≥ 20,000 (the scale GTA VI will be at): mean loss **0.263**,
   vs the baseline's **0.321** on the same launches.
-
-## Run it
-
-```sh
-mkdir -p out && MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-All four practice cases produce valid `.out` files in ~0.2 s total, and two
-runs are byte-identical.
 
 ## Files
 
